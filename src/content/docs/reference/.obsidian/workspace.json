@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ivan_durak.md",
+                "file": "ivan_durak2 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ivan_durak"
+              "title": "ivan_durak2 1"
             }
           }
         ],
@@ -186,7 +186,10 @@
   },
   "active": "1cdc319f061fdf87",
   "lastOpenFiles": [
-    "ivan_durak2.md",
+    "ivan durak",
+    "ivan durak/ivan_durak2.md",
+    "ivan_durak2 1.md",
+    "ivan durak/ivan_durak.md",
     "ivan_durak — копия.md",
     "Синхронизация аудио в Davinci resolve.md",
     "Davinci/Синхронизация аудио в Davinci resolve.md",
@@ -197,7 +200,6 @@
     "rag.md",
     "ivan_durak2",
     "Davinci resolve.md",
-    "ivan_durak.md",
     "example.md",
     "тестовая-ссылка.md"
   ]
