@@ -1,0 +1,86 @@
+# astro-manifests.yaml
+
+# --- 1. Deployment: Запуск контейнера Nginx/Astro ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: astro-starlight-deployment
+  labels:
+    app: astro-starlight-web
+spec:
+  replicas: 2 # Две копии для отказоустойчивости
+  selector:
+    matchLabels:
+      app: astro-starlight-web
+  template:
+    metadata:
+      labels:
+        app: astro-starlight-web
+    spec:
+      # Используем секрет для доступа к приватному реестру Timeweb (как в Serverpod)
+      imagePullSecrets:
+      - name: timeweb-registry-secret 
+      containers:
+      - name: astro-starlight-nginx
+        # ПОЛНЫЙ ПУТЬ К ВАШЕМУ ОБРАЗУ
+        image: 12cbd00d-reasonable-corvus.registry.twcstorage.ru/astro-starlight:latest 
+        
+        resources:
+          limits:
+            memory: "64Mi" 
+            cpu: "50m" 
+        
+        ports:
+        - containerPort: 80 # Nginx порт
+        
+        # Проверки, которые подтверждают, что контейнер запущен и готов
+        readinessProbe:
+          httpGet:
+            path: / 
+            port: 80
+          initialDelaySeconds: 5 
+          periodSeconds: 10     
+---
+# --- 2. Service: Внутренний доступ ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: astro-starlight-service
+spec:
+  selector:
+    app: astro-starlight-web
+  ports:
+    # Имя 'web' для согласованности с Ingress
+    - name: web 
+      protocol: TCP
+      port: 80 
+      targetPort: 80 
+  type: ClusterIP
+---
+# --- 3. Ingress: Внешний доступ через HTTPS ---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: astro-starlight-ingress
+  annotations:
+    # Аннотации, которые вы использовали для Serverpod
+    kubernetes.io/ingress.class: "nginx" 
+    cert-manager.io/cluster-issuer: "letsencrypt-prod" 
+  labels:
+    app: astro-starlight-web
+spec:
+  tls:
+  - hosts:
+    - wiki.my-points.ru # ВАШ ПОДДОМЕН
+    secretName: astro-starlight-tls # Секрет для SSL/TLS
+  rules:
+  - host: "wiki.my-points.ru" # ВАШ ПОДДОМЕН
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: astro-starlight-service
+            port:
+              name: web # Именованный порт из Service

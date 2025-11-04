@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "d3aef61442bd9d3a",
+    "type": "split",
+    "children": [
+      {
+        "id": "d603aa9bf0f59267",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d6f28152235c955",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "example.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "example"
+            }
+          },
+          {
+            "id": "1cdc319f061fdf87",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ivan_durak.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ivan_durak"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bafaeed5737161c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "219beaf40ebf2b0a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92835f3308454b03",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d6da3db051970328",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5fb9f46aa864e8f8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "dd0b7b65e403fec2",
+    "type": "split",
+    "children": [
+      {
+        "id": "64498b04f0e33a89",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a48ee96e5734d5f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "example.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for example"
+            }
+          },
+          {
+            "id": "9fe66505b375134e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "example.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from example"
+            }
+          },
+          {
+            "id": "51191aedfc9e80c9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1916d3254cd7bf11",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "example.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of example"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "1cdc319f061fdf87",
+  "lastOpenFiles": [
+    "Синхронизация аудио в Davinci resolve.md",
+    "Davinci/Синхронизация аудио в Davinci resolve.md",
+    "Davinci",
+    "rag_prod.md",
+    "rag_draft.md",
+    "rag — копия.md",
+    "rag.md",
+    "ivan_durak2.md",
+    "ivan_durak2",
+    "ivan_durak — копия.md",
+    "Davinci resolve.md",
+    "ivan_durak.md",
+    "example.md",
+    "тестовая-ссылка.md"
+  ]
+}
